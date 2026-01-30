@@ -9,7 +9,7 @@ done	- interactable
 done	- collectable
 done	- exit location / finish line
 done	- Title screen and end/restart screen
-	- Animation of 'putting mask on'
-	- timer / time limit
+done	- timer / time limit
+done	- death screen
 	- pro builder world/level design
-	
+	- Animation of 'putting mask on'
