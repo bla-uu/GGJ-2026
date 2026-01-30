@@ -86,14 +86,19 @@ namespace StarterAssets
 			}
 		}
 
-		private void Awake()
+        private LayerMask interactableMask;
+		public Transform InteractRaycastOrigin;
+		public GameObject collectable;
+
+        private void Awake()
 		{
 			// get a reference to our main camera
 			if (_mainCamera == null)
 			{
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
-		}
+            interactableMask = LayerMask.GetMask("Interactable");
+        }
 
 		private void Start()
 		{
@@ -114,10 +119,15 @@ namespace StarterAssets
 		{
 			JumpAndGravity();
 			GroundedCheck();
-			Move();
-		}
+			Move();	
+        }
 
-		private void LateUpdate()
+        private void FixedUpdate()
+        {
+            Interact();
+        }
+
+        private void LateUpdate()
 		{
 			CameraRotation();
 		}
@@ -246,7 +256,30 @@ namespace StarterAssets
 			}
 		}
 
-		private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
+        private void Interact()
+        {
+            if (_input.interact)
+            {
+				Debug.Log("interact Presssed");
+                RaycastHit hit;
+                // Does the ray intersect any objects excluding the player layer
+                if (Physics.Raycast(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, interactableMask))
+
+                {
+                    Debug.DrawRay(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+                    Debug.Log("Did Hit");
+					collectable.SetActive(false);
+                }
+                else
+                {
+                    Debug.DrawRay(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward) * 1000, Color.white);
+                    Debug.Log("Did not Hit");
+                }
+            }
+			_input.interact = false;
+        }
+
+        private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
 		{
 			if (lfAngle < -360f) lfAngle += 360f;
 			if (lfAngle > 360f) lfAngle -= 360f;

@@ -3,9 +3,11 @@ Going with the firefighter / runback idea. Start game, got find object, once obj
 Going to be world / level design heavy - probuilder probably
 
 Tasks:
-	- First person character
+done	- upload to git
+done	- First person character
+done	- interactable
+done	- collectable
 	- Animation of 'putting mask on'
 	- timer / time limit
-	- collectable
 	- pro builder world/level design
 	
