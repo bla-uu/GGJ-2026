@@ -1,0 +1,11 @@
+Going with the firefighter / runback idea. Start game, got find object, once object lifted apply mask and get back out.
+
+Going to be world / level design heavy - probuilder probably
+
+Tasks:
+	- First person character
+	- Animation of 'putting mask on'
+	- timer / time limit
+	- collectable
+	- pro builder world/level design
+	
