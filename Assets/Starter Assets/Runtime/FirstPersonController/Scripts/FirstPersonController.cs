@@ -89,6 +89,7 @@ namespace StarterAssets
         private LayerMask interactableMask;
 		public Transform InteractRaycastOrigin;
 		public GameObject collectable;
+		public GameObject exitLocation;
 
         private void Awake()
 		{
@@ -269,6 +270,7 @@ namespace StarterAssets
                     Debug.DrawRay(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
                     Debug.Log("Did Hit");
 					collectable.SetActive(false);
+                    exitLocation.SetActive(true);
                 }
                 else
                 {

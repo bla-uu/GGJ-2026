@@ -7,6 +7,7 @@ done	- upload to git
 done	- First person character
 done	- interactable
 done	- collectable
+	- exit location / finish line
 	- Animation of 'putting mask on'
 	- timer / time limit
 	- pro builder world/level design
