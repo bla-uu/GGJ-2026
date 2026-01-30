@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Threading;
+using UnityEngine;
 #if ENABLE_INPUT_SYSTEM
 using UnityEngine.InputSystem;
 #endif
@@ -90,6 +91,7 @@ namespace StarterAssets
 		public Transform InteractRaycastOrigin;
 		public GameObject collectable;
 		public GameObject exitLocation;
+		public CountdownTimer timer;
 
         private void Awake()
 		{
@@ -271,6 +273,7 @@ namespace StarterAssets
                     Debug.Log("Did Hit");
 					collectable.SetActive(false);
                     exitLocation.SetActive(true);
+					timer.StartTimer();
                 }
                 else
                 {
