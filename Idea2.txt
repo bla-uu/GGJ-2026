@@ -1,0 +1,9 @@
+Worker
+mask is needed to get resources
+resources improve mask allowing you to get more resources
+relate upgrades back to senses that a mask is made up of
+ - sight
+ - hearing
+ - breathing
+
+very roguelike / adventure / rpg
