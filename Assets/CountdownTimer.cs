@@ -23,12 +23,16 @@ public class CountdownTimer : MonoBehaviour
         get => _timerIsTicking;
     }
     public TextMeshProUGUI timerText;
+    public bool dsiplayTimer = false;
 
     public void Start()
     {
         //StartTimer();
         _timeRemiaing = timerStartTime;
-        DisplayTime(timerStartTime);
+        if (dsiplayTimer)
+        {
+            DisplayTime(_timeRemiaing);
+        }
     }
 
     public void Update()
@@ -38,16 +42,25 @@ public class CountdownTimer : MonoBehaviour
             if (_timeRemiaing > 0)
             {
                 _timeRemiaing -= Time.deltaTime;
-                DisplayTime(_timeRemiaing);
+                if (dsiplayTimer)
+                {
+                    DisplayTime(_timeRemiaing);
+                }
             }
             else
             {
                 _timeRemiaing = 0.0f;
-                DisplayTime(_timeRemiaing);
+                if (dsiplayTimer)
+                {
+                    DisplayTime(_timeRemiaing);
+                }
                 StopTimer();
-                StartCoroutine(LoadLevelFailedSceneAsyncScene());
-                // TODO: timer elapsed event
             }
+        }
+
+        if (!dsiplayTimer && _timeRemiaing.Equals(0.0f))
+        {
+            StartCoroutine(LoadLevelFailedSceneAsyncScene());
         }
     }
 

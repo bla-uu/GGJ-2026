@@ -93,6 +93,8 @@ namespace StarterAssets
 		public GameObject exitLocation;
 		public CountdownTimer timer;
 		public Animator maskAnimController;
+		public CountdownTimer suffocateTimer;
+		public bool noPower = false;
 
         private void Awake()
 		{
@@ -125,6 +127,10 @@ namespace StarterAssets
 			GroundedCheck();
 			Move();
 			ToggleMask();
+			if(noPower && timer.TimeRemiaing.Equals(0.0f) && !suffocateTimer.TimerIsTicking)
+			{
+				suffocateTimer.StartTimer();
+			}
         }
 
         private void FixedUpdate()
@@ -267,20 +273,29 @@ namespace StarterAssets
             {
 				Debug.Log("interact Presssed");
                 RaycastHit hit;
-                // Does the ray intersect any objects excluding the player layer
-                if (Physics.Raycast(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, interactableMask))
+				// Does the ray intersect any objects excluding the player layer
+				if (Physics.Raycast(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward), out hit, Mathf.Infinity, interactableMask))
 
-                {
-                    Debug.DrawRay(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-                    Debug.Log("Did Hit");
+				{
+					Debug.DrawRay(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+					Debug.Log("Did Hit");
 					collectable.SetActive(false);
-                    exitLocation.SetActive(true);
-                }
-                else
-                {
-                    Debug.DrawRay(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward) * 1000, Color.white);
-                    Debug.Log("Did not Hit");
-                }
+					exitLocation.SetActive(true);
+					noPower = true;
+					if (timer.TimerIsTicking)
+					{
+						suffocateTimer.StopTimer();
+					}
+					else
+					{
+						suffocateTimer.StartTimer();
+					}
+				}
+				else
+				{
+					Debug.DrawRay(InteractRaycastOrigin.position, InteractRaycastOrigin.TransformDirection(Vector3.forward) * 1000, Color.white);
+					Debug.Log("Did not Hit");
+				}
             }
 			_input.interact = false;
         }
@@ -296,10 +311,18 @@ namespace StarterAssets
                 {
 
                     timer.StopTimer();
+					if (noPower)
+					{
+						suffocateTimer.StartTimer();
+					}
                 }
                 else
                 {
                     timer.StartTimer();
+					if (noPower)
+					{
+						suffocateTimer.StopTimer();
+					}
                 }
             }
 
