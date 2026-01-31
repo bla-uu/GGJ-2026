@@ -16,7 +16,12 @@ public class CountdownTimer : MonoBehaviour
             _timeRemiaing = value;
         }
     }
-    private bool timerIsTicking = false;
+
+    private bool _timerIsTicking = false;
+    public bool TimerIsTicking
+    {
+        get => _timerIsTicking;
+    }
     public TextMeshProUGUI timerText;
 
     public void Start()
@@ -28,7 +33,7 @@ public class CountdownTimer : MonoBehaviour
 
     public void Update()
     {
-        if (timerIsTicking)
+        if (_timerIsTicking)
         {
             if (_timeRemiaing > 0)
             {
@@ -48,12 +53,12 @@ public class CountdownTimer : MonoBehaviour
 
     public void StartTimer()
     {
-        timerIsTicking = true;
+        _timerIsTicking = true;
     }
 
     public void StopTimer()
     {
-        timerIsTicking = false;
+        _timerIsTicking = false;
     }
 
     public float GetSecondsRemaining()
