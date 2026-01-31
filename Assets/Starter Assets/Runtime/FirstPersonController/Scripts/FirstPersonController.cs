@@ -104,6 +104,7 @@ namespace StarterAssets
 				_mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
 			}
             interactableMask = LayerMask.GetMask("Interactable");
+            Cursor.visible = false;
         }
 
 		private void Start()

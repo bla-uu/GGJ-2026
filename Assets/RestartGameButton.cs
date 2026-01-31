@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class RestartGameButton : MonoBehaviour
 {
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
+
     public void RestartStartGame()
     {
         StartCoroutine(LoadGameSceneAsyncScene());

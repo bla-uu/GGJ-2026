@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class StartGameButton : MonoBehaviour
 {
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
+
     public void StartGame()
     {
         StartCoroutine(LoadGameSceneAsyncScene());

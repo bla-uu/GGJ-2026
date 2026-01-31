@@ -24,8 +24,8 @@ RenderSettings:
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 0
-  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.38726702, g: 0.4681223, b: 0.67295593, a: 1}
   m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -94,7 +94,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 20201, guid: 0000000000000000f000000000000000, type: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: cd4325f3854e2604c974d475b0184da3, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -169,6 +169,11 @@ Transform:
   - {fileID: 447009236}
   - {fileID: 495480579}
   - {fileID: 558635835}
+  - {fileID: 351761324}
+  - {fileID: 349352299}
+  - {fileID: 930797672}
+  - {fileID: 164843567}
+  - {fileID: 1737286964}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &23012078
@@ -244,7 +249,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4732987}
     m_Modifications:
     - target: {fileID: 3137172882755740777, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
       propertyPath: m_Name
@@ -360,6 +365,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3919017993278094679, guid: dce6061f1caa48c4fb822210063290cb, type: 3}
   m_PrefabInstance: {fileID: 139694469}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &164843567 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811898775865859928, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
+  m_PrefabInstance: {fileID: 459546549}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &167762706
 PrefabInstance:
@@ -740,6 +750,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4b712c52dbe524e9aa1df0db89eb94, type: 3}
+--- !u!4 &349352299 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811898775865859928, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
+  m_PrefabInstance: {fileID: 1286073966}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &351761324 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811898775865859928, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
+  m_PrefabInstance: {fileID: 76969892}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &373098313
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -958,7 +978,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 50, y: 25}
-  m_SizeDelta: {x: 300, y: 50}
+  m_SizeDelta: {x: 470, y: 250}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &416154797
 MonoBehaviour:
@@ -1078,7 +1098,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4732987}
     m_Modifications:
     - target: {fileID: 3137172882755740777, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
       propertyPath: m_Name
@@ -1401,7 +1421,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4732987}
     m_Modifications:
     - target: {fileID: 3137172882755740777, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
       propertyPath: m_Name
@@ -1922,6 +1942,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5f4b712c52dbe524e9aa1df0db89eb94, type: 3}
+--- !u!4 &930797672 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811898775865859928, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
+  m_PrefabInstance: {fileID: 649467065}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1038683988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7875318820072543151, guid: 5f4b712c52dbe524e9aa1df0db89eb94, type: 3}
@@ -2069,7 +2094,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4732987}
     m_Modifications:
     - target: {fileID: 3137172882755740777, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
       propertyPath: m_Name
@@ -2189,7 +2214,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 4732987}
     m_Modifications:
     - target: {fileID: 3137172882755740777, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
       propertyPath: m_Name
@@ -2799,6 +2824,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3919017993278094679, guid: dce6061f1caa48c4fb822210063290cb, type: 3}
   m_PrefabInstance: {fileID: 1736867237}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1737286964 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8811898775865859928, guid: 712866fd9a734b544bd2ef17703828ae, type: 3}
+  m_PrefabInstance: {fileID: 1257259303}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1749377933
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3004,8 +3034,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3506,8 +3536,3 @@ SceneRoots:
   - {fileID: 292931787426227863}
   - {fileID: 6347593871009135307}
   - {fileID: 2078346727}
-  - {fileID: 76969892}
-  - {fileID: 1286073966}
-  - {fileID: 649467065}
-  - {fileID: 459546549}
-  - {fileID: 1257259303}

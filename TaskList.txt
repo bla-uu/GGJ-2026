@@ -14,3 +14,6 @@ done	- death screen
 done	- Animation of 'putting mask on'
 done	- Breathing timer
 done	- pro builder world/level design (not so probuilder)
+	- make regular breath go up again when breathing in mask
+	- fix ui (controller compat)
+	- interact instructions
