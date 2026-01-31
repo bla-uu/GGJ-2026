@@ -275,7 +275,6 @@ namespace StarterAssets
                     Debug.Log("Did Hit");
 					collectable.SetActive(false);
                     exitLocation.SetActive(true);
-					timer.StartTimer();
                 }
                 else
                 {
@@ -292,8 +291,19 @@ namespace StarterAssets
             {
                 Debug.Log("toggle mask Presssed");
 				maskAnimController.SetTrigger("ToggleMask");
+
+                if (timer.TimerIsTicking)
+                {
+
+                    timer.StopTimer();
+                }
+                else
+                {
+                    timer.StartTimer();
+                }
             }
-            _input.toggleMask = false;
+
+			_input.toggleMask = false;
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)

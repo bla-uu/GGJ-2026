@@ -11,5 +11,5 @@ done	- exit location / finish line
 done	- Title screen and end/restart screen
 done	- timer / time limit
 done	- death screen
+done	- Animation of 'putting mask on'
 	- pro builder world/level design
-	- Animation of 'putting mask on'
