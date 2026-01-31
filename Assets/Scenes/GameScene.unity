@@ -227,6 +227,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416154795}
   m_CullTransparentMesh: 1
+--- !u!95 &461728182 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7545907562531853746, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+  m_PrefabInstance: {fileID: 2008185057}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &576416142
 GameObject:
   m_ObjectHideFlags: 0
@@ -818,6 +823,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4141675286489552, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -180
+      objectReference: {fileID: 0}
+    - target: {fileID: 4317166152712044154, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7545907562531853746, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 646daf87bf62f3a44b8709bc1a241965, type: 2}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: timer
       value: 
@@ -830,6 +847,10 @@ PrefabInstance:
       propertyPath: exitLocation
       value: 
       objectReference: {fileID: 1177564805}
+    - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
+      propertyPath: maskAnimController
+      value: 
+      objectReference: {fileID: 461728182}
     - target: {fileID: 8616685848737228371, guid: c5efc39a8aaf6e64ea40e9ad573e9b47, type: 3}
       propertyPath: InteractRaycastOrigin
       value: 

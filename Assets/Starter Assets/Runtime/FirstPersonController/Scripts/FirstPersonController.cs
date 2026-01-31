@@ -92,6 +92,7 @@ namespace StarterAssets
 		public GameObject collectable;
 		public GameObject exitLocation;
 		public CountdownTimer timer;
+		public Animator maskAnimController;
 
         private void Awake()
 		{
@@ -122,7 +123,8 @@ namespace StarterAssets
 		{
 			JumpAndGravity();
 			GroundedCheck();
-			Move();	
+			Move();
+			ToggleMask();
         }
 
         private void FixedUpdate()
@@ -282,6 +284,16 @@ namespace StarterAssets
                 }
             }
 			_input.interact = false;
+        }
+
+        private void ToggleMask()
+        {
+            if (_input.toggleMask)
+            {
+                Debug.Log("toggle mask Presssed");
+				maskAnimController.SetTrigger("ToggleMask");
+            }
+            _input.toggleMask = false;
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)
